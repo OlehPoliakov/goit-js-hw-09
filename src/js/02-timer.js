@@ -70,13 +70,15 @@ class Timer {
       const currentTime = Date.now();
       const deltaTime = selectedTime - currentTime;
       const time = convertMs(deltaTime);
-      
-      this.onTick(time);
-    }, 1000);
-  }
 
-  stop() {
-    clearInterval(this.interval);
+      
+
+      this.onTick(time);
+
+      if (deltaTime < 500) {
+        clearInterval(this.interval);
+      }
+    }, 1000);
   }
 };
 
