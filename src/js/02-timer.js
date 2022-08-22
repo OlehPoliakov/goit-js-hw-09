@@ -1,8 +1,8 @@
 import flatpickr from 'flatpickr';
-
 import 'flatpickr/dist/flatpickr.min.css';
+import 'flatpickr/dist/themes/dark.css';
 
-let selectedDates = null;
+let selectedTime = null;
 
 const refs = {
   inputDate: document.querySelector('#datetime-picker'),
@@ -38,7 +38,7 @@ function pad(value) {
 const options = {
   enableTime: true,
   time_24hr: true,
-  defaultDate: new Date(),
+  defaultDate: Date.now(),
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
@@ -52,14 +52,14 @@ const options = {
 };
 
 class Timer {
-  constructor({onTick}) {
+  constructor({ onTick }) {
     this.setInterval = null;
     this.isActiv = false;
     refs.startBtn.disabled = true;
     this.onTick = onTick;
   }
 
-  start() {
+  startTimer() {
     if (this.isActiv) {
       return;
     }
@@ -70,10 +70,10 @@ class Timer {
       const currentTime = Date.now();
       const deltaTime = selectedTime - currentTime;
       const time = convertMs(deltaTime);
-
+      
       this.onTick(time);
     }, 1000);
-  };
+  }
 
   stop() {
     clearInterval(this.interval);
@@ -96,3 +96,4 @@ const timer = new Timer({
 });
 
 flatpickr(refs.inputDate, options);
+refs.startBtn.addEventListener('click', () => timer.startTimer());
