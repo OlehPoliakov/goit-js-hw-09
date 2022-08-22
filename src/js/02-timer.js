@@ -64,16 +64,13 @@ class Timer {
       return;
     }
 
-    // const selectedTime = Date.now();
     this.isActiv = true;
 
     this.interval = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = selectedTime - currentTime;
       const time = convertMs(deltaTime);
-      if (deltaTime <= 0) {
-        this.stopTimer();
-      }
+
       this.onTick(time);
     }, 1000);
   };
