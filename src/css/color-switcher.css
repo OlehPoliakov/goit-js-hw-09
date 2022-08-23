@@ -1,0 +1,28 @@
+body {
+    text-align: center;
+    display: flex;
+}
+p {
+    text-align: left;
+}
+
+button {
+    margin: auto;
+    margin-top: 25%;
+    width: 200px;
+    height: 50px;
+    background-color: #cccccc;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+button:disabled {
+    background-color: tomato;
+}
+
+button:hover,
+button:focus {
+    background-color: seagreen;
+    border: 2px solid #cccccc;
+    border-radius: 5%;
+}
