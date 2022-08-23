@@ -91,13 +91,25 @@ function updateClockface({ days, hours, minutes, seconds }) {
   refs.secondsFace.textContent = seconds;
 }
 
-refs.startBtn.addEventListener('click', () => {
-  timer.start();
-});
-
 const timer = new Timer({
   onTick: updateClockface,
 });
 
 flatpickr(refs.inputDate, options);
 refs.startBtn.addEventListener('click', () => timer.startTimer());
+
+
+// ================================================
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+refs.startBtn.addEventListener('click', btnClick);
+
+function btnClick() {
+  setInterval(() => {
+    refs.inputDate.style.backgroundColor = getRandomHexColor();
+
+  }, 1000);
+
+}

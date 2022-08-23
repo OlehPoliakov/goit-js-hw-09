@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+    background-color: teal;
+}
+p {
+    text-align: left;
+}
+input {
+    width: 500px;
+    height: 50px;
+    padding: 0 10px  ;
+    text-align: center;
+    background-color: rgb(220, 220, 220);
+    border: 2px solid #cccccc;
+    font-size: 25px;
+}
+
+button {
+    width: 500px;
+    height: 50px;
+    margin-bottom: 50px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+button:disabled {
+    background-color: tomato;
+}
+
+button:hover,
+button:focus {
+    background-color: grey;
+    border: 2px solid #cccccc;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 10px 0 10px 0;
+    border: 1px solid #cccccc;
+}
+
+.value {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.label {
+    color: #cccccc;
+}
