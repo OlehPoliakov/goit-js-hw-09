@@ -41,11 +41,13 @@ const options = {
   time_24hr: true,
   defaultDate: Date.now(),
   minuteIncrement: 1,
+
   onClose(selectedDates) {
     if (selectedDates[0] < Date.now()) {
       Notify.failure('Please choose a date in the future');
       selectedDates[0] = new Date();
       refs.startBtn.style.top = '15%';
+
     } else {
       refs.startBtn.disabled = false;
       selectedTime = selectedDates[0];
@@ -102,16 +104,12 @@ refs.startBtn.addEventListener('click', () => timer.startTimer());
 
 
 // ================================================
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
 
 refs.startBtn.addEventListener('click', btnClick);
 
 function btnClick() {
   setInterval(() => {
-    document.body.style.backgroundColor = getRandomHexColor();
+    document.body.style.backgroundColor = 'teal';
 
   }, 1000);
-
 }

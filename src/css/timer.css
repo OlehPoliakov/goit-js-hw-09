@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: teal;
+    background-color: tomato;
 }
 p {
     text-align: left;
@@ -11,13 +11,15 @@ input {
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
-    width: 300px;
+    width: 308px;
     height: 50px;
     padding: 0 10px  ;
     text-align: center;
-    background-color: rgb(220, 220, 220);
+    background-color: #3f4458;
+
     border: 2px solid #cccccc;
     font-size: 25px;
+    border-radius: 5px;
 }
 
 button {
@@ -25,12 +27,13 @@ button {
     top: 15%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 300px;
+    width: 308px;
     height: 50px;
     background-color: grey;
     border: none;
     cursor: pointer;
     font-size: 25px;
+    border-radius: 5px;
 }
 
 button:disabled {
