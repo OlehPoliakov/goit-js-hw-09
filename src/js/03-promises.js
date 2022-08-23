@@ -34,10 +34,7 @@ function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
   const objectPromise = { position, delay };
 
-  return new Promise((resolve, reject) => {
-    if (shouldResolve) {
-      resolve(objectPromise);
-    }
-    reject(objectPromise);
-  });
+  return new Promise((resolve, reject) =>
+    shouldResolve ? resolve(objectPromise) : reject(objectPromise)
+  );
 }
