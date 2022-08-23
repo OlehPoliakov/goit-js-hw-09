@@ -45,12 +45,12 @@ const options = {
     if (selectedDates[0] < Date.now()) {
       Notify.failure('Please choose a date in the future');
       selectedDates[0] = new Date();
-      refs.startBtn.style.top = '25%';
+      refs.startBtn.style.top = '15%';
     } else {
       refs.startBtn.disabled = false;
       selectedTime = selectedDates[0];
       Notify.success('Date in valid');
-      refs.startBtn.style.top = '35%';
+      refs.startBtn.style.top = '22%';
     }
   },
 };

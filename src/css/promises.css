@@ -5,9 +5,10 @@ body {
 p {
     text-align: left;
 }
+/*
 input {
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
@@ -19,10 +20,9 @@ input {
     border: 2px solid #cccccc;
     font-size: 25px;
 }
-
 button {
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 300px;
@@ -41,28 +41,5 @@ button:hover,
 button:focus {
     background-color: grey;
     border: 2px solid #cccccc;
-}
+} */
 
-.timer {
-    display: flex;
-    justify-content: center;
-    margin-top: 25%;
-}
-
-.field {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    padding: 10px 0 10px 0;
-    border: 1px solid #cccccc;
-}
-
-.value {
-    font-weight: 700;
-    font-size: 40px;
-}
-
-.label {
-    color: #cccccc;
-}
