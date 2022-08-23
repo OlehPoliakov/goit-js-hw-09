@@ -1,0 +1,2 @@
+body{text-align:center;display:flex}p{text-align:left}button{width:200px;height:50px;cursor:pointer;background-color:#ccc;margin:25% auto auto;font-size:25px}button:disabled{background-color:tomato}button:hover,button:focus{background-color:#2e8b57;border:2px solid #ccc;border-radius:5%}
+/*# sourceMappingURL=01-color-switcher.cc16913a.css.map */
