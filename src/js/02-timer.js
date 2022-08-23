@@ -45,10 +45,12 @@ const options = {
     if (selectedDates[0] < Date.now()) {
       Notify.failure('Please choose a date in the future');
       selectedDates[0] = new Date();
+      refs.startBtn.style.top = '25%';
     } else {
       refs.startBtn.disabled = false;
       selectedTime = selectedDates[0];
       Notify.success('Date in valid');
+      refs.startBtn.style.top = '35%';
     }
   },
 };
@@ -108,7 +110,7 @@ refs.startBtn.addEventListener('click', btnClick);
 
 function btnClick() {
   setInterval(() => {
-    refs.inputDate.style.backgroundColor = getRandomHexColor();
+    document.body.style.backgroundColor = getRandomHexColor();
 
   }, 1000);
 

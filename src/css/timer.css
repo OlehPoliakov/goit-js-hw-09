@@ -6,7 +6,12 @@ p {
     text-align: left;
 }
 input {
-    width: 500px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+    width: 300px;
     height: 50px;
     padding: 0 10px  ;
     text-align: center;
@@ -16,9 +21,12 @@ input {
 }
 
 button {
-    width: 500px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
     height: 50px;
-    margin-bottom: 50px;
     background-color: green;
     border: none;
     cursor: pointer;
@@ -38,6 +46,7 @@ button:focus {
 .timer {
     display: flex;
     justify-content: center;
+    margin-top: 25%;
 }
 
 .field {
