@@ -81,7 +81,7 @@ class Timer {
 
       this.onTick(time);
 
-      if (deltaTime < 500) {
+      if (deltaTime < 1000) {
         clearInterval(this.interval);
       }
     }, 1000);
